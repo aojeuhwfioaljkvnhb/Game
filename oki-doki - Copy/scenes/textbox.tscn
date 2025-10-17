@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://b17qgvq2b6vtb"]
+
+[ext_resource type="Script" path="res://scripts/textbox.gd" id="1_gxhpj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbfhg"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0iycy"]
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource("1_gxhpj")
+
+[node name="Textbox Container" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -201.0
+offset_right = 422.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = -16
+theme_override_constants/margin_top = -16
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = 7
+
+[node name="Panel" type="Panel" parent="Textbox Container"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xbfhg")
+
+[node name="MarginContainer" type="MarginContainer" parent="Textbox Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="Textbox Container/MarginContainer"]
+material = SubResource("CanvasItemMaterial_0iycy")
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Textbox Container/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="Textbox Container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = " *"
+
+[node name="Label" type="Label" parent="Textbox Container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "Placeholder text! 	Riley you suckkkk!"
+
+[node name="End" type="Label" parent="Textbox Container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 34
+text = "v "

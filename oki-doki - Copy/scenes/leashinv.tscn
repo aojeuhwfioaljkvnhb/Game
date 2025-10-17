@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbvk17blfq71m"]
+
+[ext_resource type="Texture2D" uid="uid://cs45nv52h8t3l" path="res://assets/pngimg.com - leash_PNG98.png" id="1_lfdx8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wndt"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="leashinv" type="Panel"]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 76.0
+offset_bottom = 75.0
+scale = Vector2(0.436328, 0.436328)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wndt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 1522.0
+offset_bottom = 1156.0
+scale = Vector2(0.0628008, 0.0628008)
+texture = ExtResource("1_lfdx8")

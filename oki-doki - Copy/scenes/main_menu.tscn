@@ -1,0 +1,196 @@
+[gd_scene load_steps=20 format=3 uid="uid://c0c6nqerwgc76"]
+
+[ext_resource type="Texture2D" uid="uid://bw35h8uhg4mqu" path="res://assets/Screenshot 2025-08-24 175215.png" id="1_tarff"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_utlot"]
+[ext_resource type="Texture2D" uid="uid://bcdux2j0lgg3n" path="res://assets/Visual_response-removebg-preview.png" id="2_52i2b"]
+[ext_resource type="AudioStream" uid="uid://bov5fvxcitnrv" path="res://music/Oki Doki Theme.MP3" id="3_6jqyf"]
+[ext_resource type="PackedScene" uid="uid://ciuc727p7hs7i" path="res://scenes/bennett.tscn" id="5_scxv2"]
+[ext_resource type="PackedScene" uid="uid://wmdptgbbex1e" path="res://scenes/andrew.tscn" id="6_5xn3v"]
+[ext_resource type="PackedScene" uid="uid://dsopu6h3waekj" path="res://scenes/alvyn.tscn" id="7_7bpuy"]
+[ext_resource type="PackedScene" uid="uid://0bxp05haf0ar" path="res://scenes/blake.tscn" id="8_21utq"]
+[ext_resource type="PackedScene" uid="uid://bbfatndbalb4e" path="res://scenes/dominick.tscn" id="9_ulsyu"]
+[ext_resource type="PackedScene" uid="uid://5g8xp1m4tsjv" path="res://scenes/riley.tscn" id="10_dhff2"]
+[ext_resource type="PackedScene" uid="uid://dnl07j4xlnyf4" path="res://scenes/braden.tscn" id="11_lgqnw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwuml"]
+texture = ExtResource("1_tarff")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt12n"]
+bg_color = Color(0.987123, 0.881205, 0.955064, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.589904, 0.0518669, 0.468723, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nucd"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afmgp"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u5el"]
+bg_color = Color(0.988235, 0.882353, 0.956863, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cwdb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcx2d"]
+bg_color = Color(0.988235, 0.882353, 0.956863, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtmi2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.588235, 0.0509804, 0.470588, 0.6)
+shadow_size = 5
+
+[node name="MainMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_utlot")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.5
+offset_top = -322.0
+offset_right = 578.5
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jwuml")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 353.0
+offset_right = 276.0
+offset_bottom = 564.0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_nt12n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1nucd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_afmgp")
+text = "New Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u5el")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3cwdb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_afmgp")
+text = "Options
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_gcx2d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jtmi2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_afmgp")
+text = "Exit"
+
+[node name="VisualResponse-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(158, 170)
+texture = ExtResource("2_52i2b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6jqyf")
+volume_db = 11.886
+autoplay = true
+
+[node name="bennett" parent="." instance=ExtResource("5_scxv2")]
+position = Vector2(969, 219)
+scale = Vector2(8.375, 10.5996)
+
+[node name="andrew" parent="." instance=ExtResource("6_5xn3v")]
+position = Vector2(569, 288)
+scale = Vector2(9.5, 7.125)
+
+[node name="alvyn" parent="." instance=ExtResource("7_7bpuy")]
+position = Vector2(952, 434)
+scale = Vector2(8.6875, 10.8594)
+
+[node name="blake" parent="." instance=ExtResource("8_21utq")]
+position = Vector2(400, 214)
+scale = Vector2(9.0625, 11.3281)
+
+[node name="dominick" parent="." instance=ExtResource("9_ulsyu")]
+position = Vector2(455, 486)
+scale = Vector2(9, 11.25)
+
+[node name="riley" parent="." instance=ExtResource("10_dhff2")]
+position = Vector2(728, 435)
+scale = Vector2(9.59375, 12.6195)
+
+[node name="braden" parent="." instance=ExtResource("11_lgqnw")]
+position = Vector2(771, 165)
+scale = Vector2(10.5625, 13.2031)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button3_pressed"]

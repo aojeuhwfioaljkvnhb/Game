@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyslhov04xapj"]
+
+[ext_resource type="Script" path="res://scripts/catearsinv.gd" id="1_lrt0p"]
+[ext_resource type="Texture2D" uid="uid://ciclcrbvtrj76" path="res://assets/Cat-Ear-Transparent.png" id="1_q68e5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wndt"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="catearsinv" type="Panel"]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 76.0
+offset_bottom = 75.0
+scale = Vector2(0.436328, 0.436328)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wndt")
+script = ExtResource("1_lrt0p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.87556
+offset_top = 16.043
+offset_right = 1528.88
+offset_bottom = 1216.04
+scale = Vector2(0.0551901, 0.0551901)
+texture = ExtResource("1_q68e5")

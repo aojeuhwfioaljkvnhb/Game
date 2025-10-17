@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://wmdptgbbex1e"]
+
+[ext_resource type="Texture2D" uid="uid://7lkankakmiu1" path="res://assets/10chars/spritesheets/5 idle.png" id="1_hnq6f"]
+[ext_resource type="Script" path="res://scripts/andrew.gd" id="2_jihs6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p6sl"]
+atlas = ExtResource("1_hnq6f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vliv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p6sl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_10ft5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r81a"]
+size = Vector2(14.5231, 15.1579)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x015g"]
+radius = 26.7
+
+[node name="andrew" type="AnimatedSprite2D"]
+position = Vector2(-1.90735e-06, 8)
+scale = Vector2(4, 3)
+sprite_frames = SubResource("SpriteFrames_3vliv")
+script = ExtResource("2_jihs6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_10ft5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.123076, 0.888889)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_1r81a")
+
+[node name="Interact" type="Area2D" parent="."]
+position = Vector2(-0.123076, 0.888889)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+shape = SubResource("CircleShape2D_x015g")
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

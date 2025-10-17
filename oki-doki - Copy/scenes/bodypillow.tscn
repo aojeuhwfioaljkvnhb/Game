@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://2uhyoo33acus"]
+
+[ext_resource type="Script" path="res://scripts/bodypillow.gd" id="1_x2wet"]
+[ext_resource type="Texture2D" uid="uid://p56afavb0i2r" path="res://assets/Untitled_design__8_-removebg-preview.png" id="2_q3ead"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hud0x"]
+radius = 33.0606
+
+[node name="bodypillow" type="Area2D"]
+script = ExtResource("1_x2wet")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -7.62939e-06)
+scale = Vector2(0.127668, 0.127668)
+texture = ExtResource("2_q3ead")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hud0x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

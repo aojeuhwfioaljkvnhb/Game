@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://wusotcvhi1dh"]
+
+[ext_resource type="Texture2D" uid="uid://dkfcqo81w6t0f" path="res://assets/step-stool-isolated-on-transparent-background-free-png.png" id="1_lyda8"]
+[ext_resource type="Script" path="res://scripts/stoolinv.gd" id="1_o2wfk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wndt"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="stoolinv" type="Panel"]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 76.0
+offset_bottom = 75.0
+scale = Vector2(0.436328, 0.436328)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wndt")
+script = ExtResource("1_o2wfk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.87556
+offset_top = 6.87557
+offset_right = 1926.88
+offset_bottom = 1926.88
+scale = Vector2(0.0427673, 0.0427673)
+texture = ExtResource("1_lyda8")
