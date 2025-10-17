@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2jtfulob14yh"]
+
+[ext_resource type="Texture2D" uid="uid://bw35h8uhg4mqu" path="res://assets/Screenshot 2025-08-24 175215.png" id="1_sy1yv"]
+[ext_resource type="AudioStream" uid="uid://dwvtatfyjnbx3" path="res://music/Nzg0OTU4Njk3ODUwNzA_VoUcsAfm_2fRY.mp3" id="2_tjnai"]
+
+[node name="options" type="Sprite2D"]
+position = Vector2(582.799, 326.25)
+scale = Vector2(2.04874, 2.04874)
+texture = ExtResource("1_sy1yv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -163.905
+offset_top = -104.088
+offset_right = 167.095
+offset_bottom = -81.0882
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "You thought you had options?? Ahahahaha"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -145.845
+offset_top = -12.8127
+offset_right = 185.155
+offset_bottom = 10.1873
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Might want to re-open the game gng"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -8.68764
+offset_top = 87.2487
+offset_right = 322.312
+offset_bottom = 110.249
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ":D"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label3"]
+stream = ExtResource("2_tjnai")
+volume_db = 11.886
+autoplay = true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfhlhj4cp4ndc"]
+
+[ext_resource type="Texture2D" uid="uid://bbyoimt8qc7xo" path="res://assets/unnamed.png" id="1_b3a0m"]
+[ext_resource type="Script" path="res://scripts/feetinv.gd" id="1_tgbtv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wndt"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="feetinv" type="Panel"]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 76.0
+offset_bottom = 75.0
+scale = Vector2(0.436328, 0.436328)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wndt")
+script = ExtResource("1_tgbtv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 13.7511
+offset_top = 20.6267
+offset_right = 1535.75
+offset_bottom = 1162.63
+scale = Vector2(0.0455092, 0.0455092)
+texture = ExtResource("1_b3a0m")

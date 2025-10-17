@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwtha5so4w2o5"]
+
+[ext_resource type="Texture2D" uid="uid://cs45nv52h8t3l" path="res://assets/pngimg.com - leash_PNG98.png" id="1_827f5"]
+[ext_resource type="Script" path="res://scripts/leash.gd" id="1_orh6q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hud0x"]
+radius = 33.0606
+
+[node name="leash" type="Area2D"]
+script = ExtResource("1_orh6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0410508, 0.0410508)
+texture = ExtResource("1_827f5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hud0x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

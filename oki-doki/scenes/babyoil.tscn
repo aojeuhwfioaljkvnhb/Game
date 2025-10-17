@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8d6bhj6rf86"]
+
+[ext_resource type="Script" path="res://scripts/babyoil.gd" id="1_v4tsn"]
+[ext_resource type="Texture2D" uid="uid://cpx3wg72h1mjo" path="res://assets/2627ff3a-ef79-4444-9908-6352777b09c1.png" id="2_524rq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hud0x"]
+radius = 33.0606
+
+[node name="babyoil" type="Area2D"]
+script = ExtResource("1_v4tsn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0410508, 0.0410508)
+texture = ExtResource("2_524rq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hud0x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciuc727p7hs7i"]
+
+[ext_resource type="Texture2D" uid="uid://cl8b2sub3mwit" path="res://assets/10chars/spritesheets/9 idle.png" id="1_5ymbm"]
+[ext_resource type="Script" path="res://scripts/bennett.gd" id="2_6clw3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuq4c"]
+atlas = ExtResource("1_5ymbm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inv47"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuq4c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcsih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6ljh"]
+size = Vector2(14.5231, 15.1579)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efe8o"]
+radius = 26.7
+
+[node name="bennett" type="AnimatedSprite2D"]
+position = Vector2(0, -8.5)
+scale = Vector2(4, 5.0625)
+sprite_frames = SubResource("SpriteFrames_inv47")
+script = ExtResource("2_6clw3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_gcsih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.123076, 0.888889)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_f6ljh")
+
+[node name="Interact" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+shape = SubResource("CircleShape2D_efe8o")
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

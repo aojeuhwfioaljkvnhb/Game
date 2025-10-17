@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bol68y3jtvrrq"]
+
+[ext_resource type="Texture2D" uid="uid://c7sf60ghwwld" path="res://assets/R (3).png" id="1_0fxvi"]
+[ext_resource type="Script" path="res://scripts/usbinv.gd" id="1_72my5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wndt"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="usbinv" type="Panel"]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 76.0
+offset_bottom = 75.0
+scale = Vector2(0.436328, 0.436328)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wndt")
+script = ExtResource("1_72my5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.58368
+offset_top = 13.7511
+offset_right = 1526.58
+offset_bottom = 1155.75
+scale = Vector2(0.0571895, 0.0571895)
+texture = ExtResource("1_0fxvi")
